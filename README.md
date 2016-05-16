@@ -34,18 +34,13 @@ I will define language used in the comment section here to aid your understandin
       0 represents a location that belongs to neither player
 
   The game is won when a player makes a line of four using his or her own tokens. This line can be horizontal, vertical, or diagonal.
-
     I have defined a "left diagonal" as one that goes from the top left to the bottom right and
-
                    a "right diagonal" as one that goes from the bottom left to the top right.
 
   "Free locations" are all locations that have not been chosen by either player
-
     i.e. the field keeps a 0 in their locations.
 
-
   An available location is defined as a free location that a player can make their move on.
-
     i.e. anywhere you can put your token in immediately
 
   The private instance variable availableLocations is a Map of Integers to Integers:
@@ -57,6 +52,7 @@ I will define language used in the comment section here to aid your understandin
       Thus, unless the game is over, available locations will have between 1 and 7 (inclusive) columns to choose from.
 
   The difference between a trap and a threat:
+
     A threat is a free location that has the possibility of winning.
     A trap is where two free locations have the possibility of winning.
       Even if the opponent attempts to block one way of winning, the player will win on the next turn using the other way.
